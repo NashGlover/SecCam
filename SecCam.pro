@@ -20,3 +20,20 @@ HEADERS  += mainwindow.h \
     frameworker.h
 
 FORMS    += mainwindow.ui
+
+unix:!macx {
+
+}
+
+macx {
+    INCLUDEPATH += /opt/local/include/
+    LIBS += /opt/local/lib/libopencv_contrib.2.4.9.dylib
+    LIBS += /opt/local/lib/libopencv_highgui.2.4.9.dylib
+    LIBS += /opt/local/lib/libopencv_imgproc.2.4.9.dylib
+    LIBS += /opt/local/lib/libopencv_core.2.4.9.dylib
+
+}
+
+win32 {
+
+}

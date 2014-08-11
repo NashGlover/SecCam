@@ -7,13 +7,20 @@ class FrameWorker : public QObject
 {
     Q_OBJECT
 public:
-    explicit FrameWorker(QObject *parent = 0);
+   //explicit FrameWorker(QObject *parent = 0);
     FrameWorker();
     ~FrameWorker();
 
 signals:
+    void finished();
+    void error(QString err);
+    void newFrame();
 
 public slots:
+    void process();
+
+private:
+    bool capturing;
 
 };
 
